@@ -9,7 +9,8 @@
 	const nav = [
 		{ id: 1, name: 'Home', url: '/' },
 		{ id: 2, name: 'Projects', url: '/projects' },
-		{ id: 3, name: 'AMVs', url: '/amvs' }
+		{ id: 3, name: 'AMVs', url: '/amvs' },
+		{ id: 4, name: 'Resume', url: '/resume.pdf' }
 	] as const;
 </script>
 

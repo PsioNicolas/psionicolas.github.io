@@ -9,11 +9,15 @@
 	] as const;
 </script>
 
-<div class="grid w-full grid-cols-[repeat(auto-fit,minmax(min(100%,600px),1fr))] gap-4">
+<svelte:head>
+	<title>AMVs</title>
+</svelte:head>
+
+<div class="grid w-full grid-cols-[repeat(auto-fit,minmax(min(100%,500px),1fr))] gap-8">
 	{#each amvs as amv (amv.id)}
 		<div class="flex flex-col items-center">
-			<h2 class="mb-2">{amv.name}</h2>
-			<iframe class="rounded-xl" title={amv.name} src={amv.url}></iframe>
+			<h2 class="mb-4">{amv.name}</h2>
+			<iframe class="aspect-video rounded-xl shadow-xl/20" title={amv.name} src={amv.url}></iframe>
 		</div>
 	{/each}
 </div>
