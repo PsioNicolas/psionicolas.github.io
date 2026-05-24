@@ -1,5 +1,6 @@
 <script lang="ts">
 	import './layout.css';
+	import 'prismjs/themes/prism-tomorrow.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import { resolve } from '$app/paths';
 
@@ -7,16 +8,18 @@
 
 	const nav = [
 		{ id: 1, name: 'Home', url: '/' },
-		{ id: 2, name: 'Projects', url: '/projects' }
+		{ id: 2, name: 'Projects', url: '/projects' },
+		{ id: 3, name: 'AMVs', url: '/amvs' }
 	] as const;
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
-<nav class="flex gap-2">
+<nav class="flex justify-center gap-8 bg-gray-200 p-4 outline-1">
 	{#each nav as item (item.id)}
-		<a href={resolve(item.url)}>{item.name}</a>
+		<a class="hover:text-black" href={resolve(item.url)}>{item.name}</a>
 	{/each}
 </nav>
-
-{@render children()}
+<div class="p-4">
+	{@render children()}
+</div>
