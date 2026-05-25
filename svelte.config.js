@@ -1,5 +1,5 @@
 import { mdsvex, escapeSvelte } from 'mdsvex';
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import { createHighlighter } from 'shiki';
 
 const theme = 'github-dark';
