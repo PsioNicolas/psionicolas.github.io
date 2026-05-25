@@ -22,3 +22,7 @@ nav {
 pre {
 	@apply mt-4 mb-4 rounded-lg p-4 whitespace-pre-wrap shadow-xl/20;
 }
+
+blog {
+	@apply m-auto w-1/2;
+}

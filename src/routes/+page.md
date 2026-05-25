@@ -1,6 +1,12 @@
+<script lang="ts">
+    import BlogLayout from '$lib/components/BlogLayout.svelte';
+</script>
+
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
+
+<BlogLayout>
 
 ```lua
 -- Lua was my first programming language :D (PICO-8 <3)
@@ -14,3 +20,5 @@ end
 
 welcome()
 ```
+
+</BlogLayout>

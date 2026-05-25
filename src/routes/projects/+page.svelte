@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import BlogLayout from '$lib/components/BlogLayout.svelte';
 
 	const projects = [
 		{
@@ -21,17 +22,19 @@
 	<title>Projects</title>
 </svelte:head>
 
-<h1 class="mb-4">Projects</h1>
-<ul class="flex flex-col gap-2">
-	{#each projects as project (project.id)}
-		<li>
-			<a
-				class="rounded-md p-0.5 text-blue-400 underline hover:bg-amber-200"
-				href={resolve(`/projects${project.url}`)}
-			>
-				{project.name}
-			</a>
-			<p>{project.description}</p>
-		</li>
-	{/each}
-</ul>
+<BlogLayout>
+	<h1 class="mb-4">Projects</h1>
+	<ul class="flex flex-col gap-2">
+		{#each projects as project (project.id)}
+			<li>
+				<a
+					class="rounded-md p-0.5 text-blue-400 underline hover:bg-amber-200"
+					href={resolve(`/projects${project.url}`)}
+				>
+					{project.name}
+				</a>
+				<p>{project.description}</p>
+			</li>
+		{/each}
+	</ul>
+</BlogLayout>

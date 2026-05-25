@@ -1,3 +1,9 @@
+<script lang="ts">
+    import BlogLayout from '$lib/components/BlogLayout.svelte';
+</script>
+
+<BlogLayout>
+
 # Gameboy Emulator in C
 ### Started June 10, 2025
 
@@ -11,3 +17,5 @@ int main() {
     return 0;
 }
 ```
+
+</BlogLayout>
