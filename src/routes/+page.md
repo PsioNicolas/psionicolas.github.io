@@ -8,7 +8,7 @@
 
 <BlogLayout>
 
-```lua
+```lua yeah dude bro
 -- Lua was my first programming language :D (PICO-8 <3)
 local function welcome()
     print([[

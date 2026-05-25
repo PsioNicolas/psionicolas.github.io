@@ -1,22 +1,11 @@
-import { mdsvex, escapeSvelte } from 'mdsvex';
+import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-static';
-import { createHighlighter } from 'shiki';
-
-const theme = 'github-dark';
-const highlighter = await createHighlighter({
-	themes: [theme],
-	langs: ['c', 'cpp', 'python', 'lua', 'javascript', 'typescript']
-});
+import { codeHighlighter } from './codeHighlighter.ts';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
 	extensions: ['.svx', '.md'],
-	highlight: {
-		highlighter: async (code, lang = 'text') => {
-			const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme }));
-			return `{@html \`${html}\` }`;
-		}
-	}
+	highlight: { highlighter: codeHighlighter }
 };
 
 /** @type {import('@sveltejs/kit').Config} */
