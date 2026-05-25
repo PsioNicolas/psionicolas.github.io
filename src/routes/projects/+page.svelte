@@ -27,10 +27,7 @@
 	<ul class="flex flex-col gap-2">
 		{#each projects as project (project.id)}
 			<li>
-				<a
-					class="rounded-md p-0.5 text-blue-400 underline hover:bg-amber-200"
-					href={resolve(`/projects${project.url}`)}
-				>
+				<a class="link" href={resolve(`/projects${project.url}`)}>
 					{project.name}
 				</a>
 				<p>{project.description}</p>

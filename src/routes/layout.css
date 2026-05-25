@@ -7,11 +7,11 @@ h1 {
 }
 
 h2 {
-	@apply text-3xl text-black/60;
+	@apply mb-2 text-3xl text-black/60;
 }
 
 h3 {
-	@apply text-2xl text-black/50;
+	@apply mb-2 text-2xl text-black/50;
 }
 
 nav {
@@ -25,4 +25,16 @@ pre {
 
 blog {
 	@apply m-auto w-1/2;
+}
+
+ol {
+	@apply list-decimal;
+}
+
+ul {
+	@apply list-disc;
+}
+
+.link {
+	@apply rounded-md p-0.5 text-blue-400 underline hover:bg-amber-200;
 }
