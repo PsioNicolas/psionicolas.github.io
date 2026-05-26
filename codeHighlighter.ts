@@ -13,7 +13,7 @@ interface CodeBlockParams {
 }
 
 const defaultStartLine = 1;
-const defaultTheme = 'github-dark';
+const defaultTheme: BundledTheme = 'catppuccin-mocha';
 
 /*
  * MDsveX code highlighter
@@ -56,5 +56,5 @@ export default async function codeHighlighter(code: string, lang: BundledLanguag
 		})
 	);
 
-	return `<div class="code-block">{@html \`${html}\` }</div>`;
+	return `<div class="code-block not-prose">{@html \`${html}\` }</div>`;
 }

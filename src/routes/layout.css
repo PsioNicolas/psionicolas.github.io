@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import 'tailwindcss' important;
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
@@ -7,23 +7,20 @@ h1 {
 }
 
 h2 {
-	@apply mb-2 text-3xl text-black/60;
+	@apply mb-2 text-3xl font-thin text-black/80;
 }
 
 h3 {
 	@apply mb-2 text-2xl text-black/50;
 }
 
-nav {
-	@apply text-xl text-black/50;
-}
-
 /* Code blocks */
 pre {
-	@apply my-4 rounded-xl py-6 shadow-xl/20;
+	@apply my-4 rounded-lg py-6 shadow-xl/20;
 }
 
-code {
+/* Multiline code blocks */
+code:has(> :nth-child(2)) {
 	@apply block px-6 whitespace-pre-wrap;
 }
 
@@ -53,16 +50,20 @@ code .diff {
 	@apply relative -mx-6 inline-block w-[calc(100%+12*var(--spacing))] px-6;
 }
 
-.blog {
-	@apply mx-auto max-w-5xl;
-}
-
 ol {
 	@apply list-decimal;
 }
 
 ul {
 	@apply list-disc;
+}
+
+.centered {
+	@apply mx-auto max-w-5xl;
+}
+
+.blog {
+	@apply prose max-w-none;
 }
 
 .link {

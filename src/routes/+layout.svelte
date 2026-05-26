@@ -16,11 +16,15 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
-<nav class="flex justify-center gap-8 bg-gray-200 p-4 outline-1">
-	{#each nav as item (item.id)}
-		<a class="hover:text-black" href={resolve(item.url)}>{item.name}</a>
-	{/each}
-</nav>
+<div class="relative overflow-hidden">
+	<div class="absolute inset-0 -z-1 h-full w-full bg-blue-200 mask-radial-from-blue-100"></div>
+	<nav class="flex justify-center gap-8 p-4 text-xl font-thin text-blue-700 shadow-xl/3">
+		{#each nav as item (item.id)}
+			<a class="hover:text-black" href={resolve(item.url)}>{item.name}</a>
+		{/each}
+	</nav>
+</div>
+
 <div class="p-4">
 	{@render children()}
 </div>

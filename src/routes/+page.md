@@ -1,20 +1,22 @@
 <script lang="ts">
-    import BlogLayout from '$lib/components/BlogLayout.svelte';
+    import Centered from '$lib/components/Centered.svelte';
 </script>
 
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
 
-<BlogLayout>
+<Centered>
 
 ```lua
 -- Lua was my first programming language :D (PICO-8 <3)
 local function welcome()
     print([[
+    
 This is the website of Nicolas Banatt, also known as PsioNick on the internet. This site is mainly for documenting my projects, both academic and personal.
 
 My personal interests include programming, game development, speedrunning, anime and manga.
+
     ]])
 end
 
@@ -22,4 +24,4 @@ end
 welcome() -- [!code highlight]
 ```
 
-</BlogLayout>
+</Centered>

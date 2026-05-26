@@ -1,7 +1,11 @@
 <script lang="ts">
+	import Centered from './Centered.svelte';
+
 	const { children } = $props();
 </script>
 
-<div class="blog">
-	{@render children()}
-</div>
+<Centered>
+	<div class="blog">
+		{@render children()}
+	</div>
+</Centered>
