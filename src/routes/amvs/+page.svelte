@@ -17,7 +17,10 @@
 	{#each amvs as amv (amv.id)}
 		<div class="flex flex-col items-center">
 			<h2 class="mb-4">{amv.name}</h2>
-			<iframe class="aspect-video rounded-xl bg-black shadow-xl/20" title={amv.name} src={amv.url}
+			<iframe
+				class="aspect-video rounded-xl bg-black shadow-xl/20 outline-3 outline-indigo-300"
+				title={amv.name}
+				src={amv.url}
 			></iframe>
 		</div>
 	{/each}

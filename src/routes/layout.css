@@ -2,8 +2,37 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* https://www.reddit.com/r/tailwindcss/comments/1jvi5ip/how_to_make_dark_mode_easier_in_tailwind_v4/ */
+@theme {
+	--color-primary: #166534;
+	--color-muted: #e5e5e5;
+	--color-tertiary: #94a3b8;
+	--color-surface: #ffffff;
+	--color-accent: #64748b;
+	--color-secondary: #dcfce7;
+	--color-content: #0f172a;
+	--color-background: #f8fafc;
+}
+
+.dark {
+	--color-primary: #4ade80;
+	--color-muted: #334155;
+	--color-tertiary: #64748b;
+	--color-surface: #1e293b;
+	--color-accent: #94a3b8;
+	--color-secondary: #064e3b;
+	--color-content: #f1f5f9;
+	--color-background: #0f172a;
+}
+
 html {
 	@apply overflow-y-scroll;
+}
+
+body {
+	@apply bg-background;
 }
 
 h1 {
@@ -20,7 +49,7 @@ h3 {
 
 /* Code blocks */
 pre {
-	@apply my-4 rounded-lg py-6 shadow-xl/20;
+	@apply my-4 rounded-lg py-6 shadow-xl/20 outline-3 outline-indigo-300;
 }
 
 /* Multiline code blocks */
@@ -72,4 +101,17 @@ ul {
 
 .link {
 	@apply rounded-md p-0.5 text-blue-400 underline hover:bg-amber-200;
+}
+
+@keyframes scroll {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: -100% 0;
+	}
+}
+
+.infinite-scroll {
+	@apply animate-[scroll_5s_linear_infinite] bg-size-[auto_100%] bg-repeat-x;
 }
