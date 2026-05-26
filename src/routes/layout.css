@@ -2,6 +2,10 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+html {
+	@apply overflow-y-scroll;
+}
+
 h1 {
 	@apply text-4xl text-black/70;
 }
