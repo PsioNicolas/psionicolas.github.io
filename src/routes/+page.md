@@ -8,7 +8,7 @@
 
 <BlogLayout>
 
-```lua yeah dude bro
+```lua
 -- Lua was my first programming language :D (PICO-8 <3)
 local function welcome()
     print([[
@@ -18,7 +18,8 @@ My personal interests include programming, game development, speedrunning, anime
     ]])
 end
 
-welcome()
+-- [!code ++]
+welcome() -- [!code highlight]
 ```
 
 </BlogLayout>

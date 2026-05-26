@@ -20,11 +20,41 @@ nav {
 
 /* Code blocks */
 pre {
-	@apply mt-4 mb-4 rounded-lg p-4 whitespace-pre-wrap shadow-xl/20;
+	@apply my-4 rounded-xl py-6 shadow-xl/20;
 }
 
-blog {
-	@apply m-auto w-1/2;
+code {
+	@apply block px-6 whitespace-pre-wrap;
+}
+
+code .highlighted {
+	@apply -mx-6 inline-block w-[calc(100%+12*var(--spacing))] bg-[rgba(101,117,133,.3)] px-6;
+}
+
+code .diff.add:before {
+	@apply text-[#3dd68c] content-['+'];
+}
+
+code .diff.remove:before {
+	@apply text-[#cb7676] content-['-'];
+}
+
+code .diff.remove {
+	@apply opacity-70;
+}
+
+/* + or - */
+code .diff:before {
+	@apply absolute left-2.5;
+}
+
+/* Relative positioning lets diff + or - work with absolute positioning */
+code .diff {
+	@apply relative -mx-6 inline-block w-[calc(100%+12*var(--spacing))] px-6;
+}
+
+.blog {
+	@apply mx-auto max-w-5xl;
 }
 
 ol {

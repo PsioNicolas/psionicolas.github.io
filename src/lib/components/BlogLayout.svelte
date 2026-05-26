@@ -2,6 +2,6 @@
 	const { children } = $props();
 </script>
 
-<div class="mx-auto max-w-5xl">
+<div class="blog">
 	{@render children()}
 </div>

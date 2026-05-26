@@ -1,11 +1,11 @@
 import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-static';
-import { codeHighlighter } from './codeHighlighter.ts';
+import highlighter from './codeHighlighter.ts';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
 	extensions: ['.svx', '.md'],
-	highlight: { highlighter: codeHighlighter }
+	highlight: { highlighter }
 };
 
 /** @type {import('@sveltejs/kit').Config} */
