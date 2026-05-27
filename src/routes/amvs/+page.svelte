@@ -16,7 +16,7 @@
 <div class="grid w-full grid-cols-[repeat(auto-fit,minmax(min(100%,500px),1fr))] gap-8">
 	{#each amvs as amv (amv.id)}
 		<div class="flex flex-col items-center">
-			<h2 class="mb-4 text-primary">{amv.name}</h2>
+			<h2 class="mb-4 text-secondary">{amv.name}</h2>
 			<iframe
 				class="aspect-video rounded-xl bg-black shadow-xl/20 outline-3 outline-accent"
 				allowfullscreen

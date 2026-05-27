@@ -56,5 +56,5 @@ export default async function codeHighlighter(code: string, lang: BundledLanguag
 		})
 	);
 
-	return `<div class="code-block not-prose">{@html \`${html}\` }</div>`;
+	return `<div class="code-block">{@html \`${html}\` }</div>`;
 }

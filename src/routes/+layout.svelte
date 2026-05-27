@@ -1,7 +1,7 @@
 <script lang="ts">
 	import './layout.css';
 	import 'prismjs/themes/prism-tomorrow.css';
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/evilkirby.svg';
 	import Nav from '$lib/components/Nav.svelte';
 	import LightDarkToggle from '$lib/components/LightDarkToggle.svelte';
 

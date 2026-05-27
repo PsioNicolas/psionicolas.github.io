@@ -2,7 +2,6 @@
 	let dark = $state(false);
 
 	$effect(() => {
-		console.log('dark: ', dark);
 		if (dark) {
 			document.documentElement.classList.add('dark');
 		} else {
