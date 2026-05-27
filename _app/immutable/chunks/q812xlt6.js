@@ -1,1 +1,0 @@
-import{D as e,g as t,l as n,m as r,z as i}from"./lKAUG57D.js";import"./xihTtKlq.js";var a=t(`<div class="mx-auto max-w-5xl"><!></div>`);function o(t,o){var s=a();n(e(s),()=>o.children),i(s),r(t,s)}export{o as t};

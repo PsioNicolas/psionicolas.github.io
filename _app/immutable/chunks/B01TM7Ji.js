@@ -1,0 +1,1 @@
+import{A as e,H as t,g as n,l as r,m as i}from"./CNsnTIo_.js";import"./xihTtKlq.js";var a=n(`<div class="centered"><!></div>`);function o(n,o){var s=a();r(e(s),()=>o.children),t(s),i(n,s)}export{o as t};
