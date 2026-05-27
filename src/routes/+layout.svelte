@@ -11,9 +11,9 @@
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
 <Nav />
+<div class="fixed bottom-8 left-8 flex">
+	<LightDarkToggle />
+</div>
 <main id="content" class="p-4">
 	{@render children()}
 </main>
-<div class="fixed bottom-10 left-10 z-20">
-	<LightDarkToggle />
-</div>
