@@ -18,7 +18,7 @@
 }
 
 .dark {
-	--color-primary: var(--color-red-300);
+	--color-primary: var(--color-purple-300);
 	--color-muted: #334155;
 	--color-tertiary: var(--color-orange-100);
 	--color-surface: var(--color-gray-400);
@@ -101,7 +101,12 @@ ol {
 }
 
 .link {
-	@apply rounded-md text-tertiary underline hover:bg-amber-200;
+	@apply text-tertiary underline hover:bg-muted;
+}
+
+/* Markdown links */
+a[rel~='nofollow'] {
+	@apply text-tertiary underline hover:bg-muted;
 }
 
 /*@keyframes scroll {

@@ -10,7 +10,8 @@
 </script>
 
 <!-- https://www.fffuel.co/aaabstract/ -->
-<div class="sticky top-0 z-10 bg-background">
+<!-- TODO: Figure out how to make this look better (can remove or change bg color?) -->
+<div class="sticky top-0 z-10 bg-background/70 outline-1 outline-background backdrop-blur-sm">
 	<div class="relative overflow-hidden">
 		<div class="infinite-scroll absolute inset-0 -z-1 h-full w-full">
 			<!-- Watercolors -->
@@ -26,7 +27,7 @@
 		</div>
 		<nav class="flex flex-wrap justify-center gap-12 p-4 text-xl font-thin text-primary shadow-xl">
 			{#each nav as item (item.id)}
-				<a class="hover:text-black" href={resolve(item.url)}>{item.name}</a>
+				<a class="hover:text-tertiary" href={resolve(item.url)}>{item.name}</a>
 			{/each}
 		</nav>
 	</div>
