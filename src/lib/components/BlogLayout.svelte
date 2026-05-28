@@ -12,7 +12,9 @@
 		const headings = blog.querySelectorAll('h1, h2, h3, h4, h5, h6');
 		const headingsCache: BlogHeading[] = [];
 		headings.forEach((heading, i) => {
+			if (i == 1) return; // Skip the date
 			heading.id = `blog-heading-${i + 1}`;
+			heading.classList.add('blog-heading');
 			headingsCache.push({
 				id: heading.id,
 				text: heading.textContent ?? `Heading ${i + 1}`,
@@ -28,10 +30,10 @@
 <!-- <BlogScrollbar> -->
 <Centered>
 	<div id="blog">
-		<div use:getHeadings id="blog_content" class="inline-block w-2/3">
+		<div use:getHeadings id="blog-content" class="inline-block w-2/3">
 			{@render children()}
 		</div>
-		<div id="blog_toc" class="fixed inline-block w-1/4 align-top" role="doc-toc">
+		<div id="blog-toc" class="fixed mt-2 ml-4 inline-block w-1/4 align-top" role="doc-toc">
 			<TableOfContents headings={blogHeadings} />
 		</div>
 	</div>

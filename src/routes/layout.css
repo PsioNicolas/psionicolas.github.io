@@ -48,6 +48,15 @@ h3 {
 	@apply mb-2 text-2xl font-thin text-surface;
 }
 
+#blog-content > h1,
+#blog-content > h2,
+#blog-content > h3,
+#blog-content > h4,
+#blog-content > h5,
+#blog-content > h6 {
+	@apply scroll-mt-20;
+}
+
 p {
 	@apply mb-4 text-lg font-thin text-content;
 }
