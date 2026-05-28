@@ -1,7 +1,16 @@
 <script lang="ts">
-	let dark = $state(false);
+	import { onMount } from 'svelte';
+
+	let dark: boolean = $state(false);
+
+	const darkModeStorageBinding = 'darkMode';
+
+	onMount(() => {
+		dark = JSON.parse(sessionStorage.getItem(darkModeStorageBinding) ?? JSON.stringify(dark));
+	});
 
 	$effect(() => {
+		sessionStorage.setItem(darkModeStorageBinding, JSON.stringify(dark));
 		if (dark) {
 			document.documentElement.classList.add('dark');
 		} else {

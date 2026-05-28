@@ -135,6 +135,4 @@ int main() {
 }
 ```
 
-## yup
-
 </BlogLayout>
