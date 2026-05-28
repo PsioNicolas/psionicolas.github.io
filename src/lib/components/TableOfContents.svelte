@@ -1,22 +1,24 @@
 <script lang="ts">
-	import type { HeadingTree } from '../types';
+	import type { BlogHeading } from '../types';
 
-	const { rootHeading }: { rootHeading: Heading } = $props();
+	function setActive(e: MouseEvent) {
+		const element = e.target as HTMLElement;
+		element?.classList.add('active');
+	}
+
+	const { headings }: { headings: BlogHeading[] } = $props();
 </script>
 
-{#snippet renderHeading(heading: HeadingTree)}
-	<li id="blog_section_{heading.id}">
-		<a href="#blog_section_{heading.id}">{heading.text}</a>
+{#snippet renderHeading(heading: BlogHeading)}
+	<li style="padding-left: {heading.level * 1.5}rem">
+		<a href="#{heading.id}" class="font-light text-surface hover:underline" onclick={setActive}
+			>{heading.text}</a
+		>
 	</li>
 {/snippet}
 
-{#snippet tableOfContents(rootHeading: HeadingTree)}
-	<ul>
-		{@render renderHeading(rootHeading)}
-		{#each rootHeading.subHeadings as subHeading (subHeading.id)}
-			<li class="pl-8">{@render tableOfContents(subHeading)}</li>
-		{/each}
-	</ul>
-{/snippet}
-
-{@render tableOfContents(rootHeading)}
+<ul class="flex flex-col gap-2">
+	{#each headings as heading (heading.id)}
+		{@render renderHeading(heading)}
+	{/each}
+</ul>

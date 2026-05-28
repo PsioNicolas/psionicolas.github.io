@@ -1,5 +1,1 @@
-export type HeadingTree = {
-	id: number;
-	text: string;
-	subHeadings: HeadingTree[];
-};
+export type BlogHeading = { id: string; text: string; level: number };
