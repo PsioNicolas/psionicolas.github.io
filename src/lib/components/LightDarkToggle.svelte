@@ -6,16 +6,16 @@
 	const darkModeStorageBinding = 'darkMode';
 
 	onMount(() => {
-		dark = JSON.parse(sessionStorage.getItem(darkModeStorageBinding) ?? JSON.stringify(dark));
+		dark = document.documentElement.classList.contains('dark');
 	});
 
 	$effect(() => {
-		sessionStorage.setItem(darkModeStorageBinding, JSON.stringify(dark));
 		if (dark) {
 			document.documentElement.classList.add('dark');
 		} else {
 			document.documentElement.classList.remove('dark');
 		}
+		localStorage.setItem(darkModeStorageBinding, JSON.stringify(dark));
 	});
 
 	function toggleDarkMode() {
