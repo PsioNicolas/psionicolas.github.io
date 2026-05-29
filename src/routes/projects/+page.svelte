@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import BlogLayout from '$lib/components/BlogLayout.svelte';
+	import Centered from '$lib/components/Centered.svelte';
 
 	const projects = [
 		{
@@ -22,7 +22,7 @@
 	<title>Projects</title>
 </svelte:head>
 
-<BlogLayout>
+<Centered>
 	<h1 class="mb-4">Projects</h1>
 	<ul class="flex-col gap-2">
 		{#each projects as project (project.id)}
@@ -53,4 +53,4 @@
 			</li>
 		{/each}
 	</ul>
-</BlogLayout>
+</Centered>

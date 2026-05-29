@@ -1,12 +1,14 @@
 <script lang="ts">
-    import Centered from '$lib/components/Centered.svelte';
+    import HomeLayout from '$lib/components/HomeLayout.svelte';
 </script>
 
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
 
-<Centered>
+<HomeLayout>
+
+<!--<img src="/gamerbus.png" alt="PsioNick Midbus" class="w-1/3 rounded-[130px] outline-2" />-->
 
 ```lua
 -- Lua was my first programming language :D (PICO-8 <3)
@@ -24,4 +26,4 @@ end
 welcome() -- [!code highlight]
 ```
 
-</Centered>
+</HomeLayout>

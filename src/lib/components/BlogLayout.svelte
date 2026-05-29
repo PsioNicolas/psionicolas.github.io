@@ -66,10 +66,14 @@
 <!-- <BlogScrollbar> -->
 <Centered>
 	<div id="blog">
-		<div use:getHeadings id="blog-content" class="inline-block w-2/3">
+		<div use:getHeadings id="blog-content" class="inline-block w-full md:w-2/3">
 			{@render children()}
 		</div>
-		<div id="blog-toc" class="fixed mt-2 ml-4 inline-block w-1/4 align-top" role="doc-toc">
+		<div
+			id="blog-toc"
+			class="invisible fixed mt-2 ml-4 inline-block w-1/4 align-top md:visible"
+			role="doc-toc"
+		>
 			<TableOfContents headings={blogHeadings} bind:activeId={activeHeadingId} />
 		</div>
 	</div>
