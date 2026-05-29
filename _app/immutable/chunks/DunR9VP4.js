@@ -1,0 +1,1 @@
+import{K as e,N as t,_ as n,f as r,y as i}from"./BSB4G4LT.js";import"./xihTtKlq.js";var a=i(`<div class="centered"><!></div>`);function o(i,o){var s=a();r(t(s),()=>o.children),e(s),n(i,s)}export{o as t};
