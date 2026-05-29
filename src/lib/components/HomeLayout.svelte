@@ -15,7 +15,8 @@
 			<figcaption class="flex gap-4">
 				<a
 					class="link rounded-md border-t text-2xl font-extralight no-underline"
-					href="https://equinoxette.neocities.org/">Art by Equinoxette</a
+					href="https://equinoxette.neocities.org/"
+					target="_blank">Art by Equinoxette</a
 				>
 			</figcaption>
 		</figure>
