@@ -8,7 +8,7 @@
 /* Light theme */
 @theme {
 	--color-primary: var(--color-blue-700);
-	--color-muted: #c5c5c5;
+	--color-muted: #d5d5d5;
 	--color-tertiary: var(--color-red-900);
 	--color-surface: black;
 	--color-accent: var(--color-gray-700);
@@ -104,10 +104,6 @@ ol {
 /*ul {
 	@apply list-disc;
 }*/
-
-.centered {
-	@apply mx-auto max-w-6xl;
-}
 
 .link {
 	@apply text-tertiary underline hover:bg-muted;

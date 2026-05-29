@@ -14,6 +14,6 @@
 <div class="fixed bottom-8 left-8 flex">
 	<LightDarkToggle />
 </div>
-<main id="content" class="p-4">
+<main id="content" class="flex min-h-[calc(100vh-4rem)] p-4">
 	{@render children()}
 </main>

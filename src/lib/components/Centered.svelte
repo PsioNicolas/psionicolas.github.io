@@ -2,6 +2,6 @@
 	const { children } = $props();
 </script>
 
-<div class="centered">
+<div class="mx-auto max-w-6xl flex-1">
 	{@render children()}
 </div>

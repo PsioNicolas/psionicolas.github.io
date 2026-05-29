@@ -5,8 +5,8 @@
 </script>
 
 <Centered>
-	<div class="grid grid-cols-1 gap-6 md:grid-cols-[1fr_2fr]">
-		<figure class="flex flex-col items-center justify-center gap-6 justify-self-center">
+	<div class="grid h-full grid-cols-1 items-center gap-6 pb-10 md:grid-cols-[1fr_2fr]">
+		<figure class="flex flex-col items-center justify-center gap-6">
 			<img
 				src="/gamerbus.png"
 				alt="PsioNick Midbus"
