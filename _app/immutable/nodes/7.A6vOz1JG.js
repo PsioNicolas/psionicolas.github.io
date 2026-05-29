@@ -1,0 +1,1 @@
+import{M as e,O as t,_ as n,u as r,y as i}from"../chunks/BSB4G4LT.js";import"../chunks/xihTtKlq.js";import{t as a}from"../chunks/0ON7y1SJ.js";var o=i(`<iframe class="aspect-square rounded-xl" title="Resume" src="/resume.pdf"></iframe>`);function s(i){r(`1mijfb4`,n=>{t(()=>{e.title=`Resume`})}),a(i,{children:(e,t)=>{n(e,o())},$$slots:{default:!0}})}export{s as component};
