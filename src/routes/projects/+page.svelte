@@ -14,6 +14,12 @@
 			name: 'This website',
 			url: '/this-website',
 			description: 'The making of this website.'
+		},
+		{
+		    id: 3,
+			name: 'Playing 100 (?) Short Indie Games',
+			url: '/indie-games',
+			description: 'Weaning inspiration from short indie games to make my own.'
 		}
 	] as const;
 </script>

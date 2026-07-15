@@ -63,7 +63,7 @@ p {
 
 /* Code blocks */
 pre {
-	@apply my-4 rounded-lg py-6 shadow-xl/20 outline-3 outline-accent;
+	@apply my-4 rounded-2xl py-6 shadow-xl/20;
 }
 
 /* Multiline code blocks */
